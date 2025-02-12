@@ -13,5 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expose the port FastAPI will run on
 EXPOSE 8000
 
-# Run the application
+# Run the application on the cloud
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
