@@ -33,6 +33,7 @@ fastapi-book-project/
 │   └── test_books.py       # API endpoint tests
 ├── main.py                 # Application entry point
 ├── requirements.txt        # Project dependencies
+|-- Dockerfile              # Docker build file
 └── README.md
 ```
 
