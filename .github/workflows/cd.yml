@@ -25,13 +25,6 @@ jobs:
           ssh -i ~/.ssh/id_rsa ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
           cd ~/hngx-stage2-fastapi-book-project
           git pull origin main
-          # Try docker compose first (newer versions)
-          if command -v docker compose &> /dev/null; then
-            docker compose down
-            docker compose up -d --build
-          else
-            # Fall back to docker-compose (older versions)
-            docker-compose down
-            docker-compose up -d --build
-          fi
+          docker-compose down || true
+          docker-compose up -d --build
           EOF
